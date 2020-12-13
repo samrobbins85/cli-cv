@@ -1,6 +1,6 @@
-# NPM Card
+# npm cli cv
 
-This is an information card about me, it can be accessed by typing
+This is my CV, as a CLI!
 
 ```sh
 npx samrobbins
