@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/samrobbins85/card.git"
+    "url": "git+https://github.com/samrobbins85/cli-cv.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/samrobbins85/card/issues"
+    "url": "https://github.com/samrobbins85/cli-cv/issues"
   },
-  "homepage": "https://github.com/samrobbins85/card#readme",
+  "homepage": "https://github.com/samrobbins85/cli-cv#readme",
   "dependencies": {
     "import-jsx": "^4.0.0",
     "ink": "^3.0.8",
