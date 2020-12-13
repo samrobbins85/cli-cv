@@ -1,5 +1,5 @@
 const React = require("react");
-const { Text, Box } = require("ink");
+const { Text, Box, measureElement } = require("ink");
 const BigText = require("ink-big-text");
 
 function Skill(props) {
@@ -35,6 +35,12 @@ function Section(props) {
 }
 
 const CV = () => {
+  const [w, setw] = React.useState(0);
+  React.useEffect(() => {
+    const { width, height } = measureElement(ref.current);
+    setw(width);
+  }, []);
+  const ref = React.useRef();
   return (
     <Box
       borderStyle="double"
@@ -42,9 +48,14 @@ const CV = () => {
       paddingY={1}
       paddingX={4}
       flexDirection="column"
+      ref={ref}
     >
       <Box justifyContent="center">
-        <BigText text="Sam Robbins" font="simple" />
+        {w > 100 ? (
+          <BigText text="Sam Robbins" font="simple" />
+        ) : (
+          <BigText text="Sam Robbins" font="tiny" />
+        )}
       </Box>
       <Section title="Skills">
         <Skill name="Programming languages">JavaScript, Python, SQL, C</Skill>
