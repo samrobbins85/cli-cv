@@ -1,13 +1,13 @@
 {
   "name": "samrobbins",
-  "version": "1.0.1",
+  "version": "2.0.1",
   "description": "",
   "main": "index.js",
   "bin": {
     "samrobbins": "index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "ink": "npx babel ink.js -o out.js && node out.js"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,15 @@
   },
   "homepage": "https://github.com/samrobbins85/card#readme",
   "dependencies": {
-    "boxen": "^4.2.0",
-    "chalk": "^4.1.0"
+    "import-jsx": "^4.0.0",
+    "ink": "^3.0.8",
+    "ink-big-text": "^1.2.0",
+    "react": "^17.0.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.10",
+    "@babel/preset-react": "^7.12.10"
   }
 }
