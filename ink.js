@@ -42,7 +42,6 @@ const CV = () => {
       paddingY={1}
       paddingX={4}
       flexDirection="column"
-      width="80%"
     >
       <Box justifyContent="center">
         <BigText text="Sam Robbins" font="simple" />
