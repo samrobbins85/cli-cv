@@ -1,0 +1,101 @@
+{
+  "name": "Sam Robbins",
+  "skills": {
+    "Programming Languages": ["JavaScript", "Python", "SQL", "C"],
+    "Software + Tools": [
+      "Next.js",
+      "Node.js",
+      "Electron",
+      "Bash",
+      "Powershell",
+      "Hugo",
+      "Git",
+      "MongoDB"
+    ],
+    "Libraries + Packages": [
+      "Tailwind CSS",
+      "React",
+      "Bootstrap",
+      "UIkit",
+      "NumPy",
+      "NetworkX"
+    ],
+    "Platforms": ["Arduino", "Raspberry Pi", "Linux"]
+  },
+  "qualifications": [
+    {
+      "title": "Computer Science BSc",
+      "date": "October 2018 - Present",
+      "description": "Durham University"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Durham University Demonstrator",
+      "date": "October 2020 - Present",
+      "description": "Taught Software Engineering to second year students. Involves guiding them in creating a project for an external client."
+    },
+    {
+      "title": "Global Cyber Alliance Summer Intern",
+      "date": "July 2020 - September 2020",
+      "description": "Worked on a range of projects, including a tool to compare DNS services and a tool to detect the presence of Intel security measures on a computer. Also set up DMARC for a range of customers"
+    },
+    {
+      "title": "DurHack Tech Officer",
+      "date": "February 2020 - November 2020",
+      "description": "Working with both the tech and logistics of a remote hackathon"
+    },
+    {
+      "title": "Google init.g",
+      "date": "November 2019",
+      "description": "Learned about Binary Exploits, Fuzzing, and reverse engineering Android apps"
+    },
+    {
+      "title": "Web Developer at Physics and Maths Tutor",
+      "date": "October 2019 - January 2020",
+      "description": "Further developing their WordPress site to include new files and change page formatting"
+    }
+  ],
+  "projects": [
+    {
+      "title": "CV Generator",
+      "date": "November 2020",
+      "description": "A full stack application to store and host your CV"
+    },
+    {
+      "title": "init.OSS",
+      "date": "September 2020 - Present",
+      "description": "A website to guide people in making their first contributions to open source software"
+    },
+    {
+      "title": "Auth0 Hackathon",
+      "date": "August 2020",
+      "description": "Built a tool which made it easier to add DMARC email verification to your domain on Vercel. This won third prize in the Security category"
+    },
+    {
+      "title": "CS Notes",
+      "date": "July 2020 - Present",
+      "description": "Used Markdown and React to create a website to display and organise my notes"
+    },
+    {
+      "title": "Same Home Different Hacks",
+      "date": "June 2020",
+      "description": "Used pair programming to create a Flutter app which organized electronic components and assigned them to projects"
+    },
+    {
+      "title": "Hugo Developer Portfolio",
+      "date": "December 2019 - Present",
+      "description": "Created a portfolio website Hugo theme with the UIkit CSS Framework"
+    },
+    {
+      "title": "Foodbank stocktake system",
+      "date": "October 2019 - March 2020",
+      "description": "In a team produced a fullstack website to manage stock for a local foodbank. Built with React and Node.js"
+    },
+    {
+      "title": "DurHack 2019",
+      "date": "November 2019",
+      "description": "Created a tool to help people with dementia. Personally integrated Twilio and the Capital One API. This won best use of MongoDB and we were finalists"
+    }
+  ]
+}
