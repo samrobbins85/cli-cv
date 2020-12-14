@@ -1,8 +1,5 @@
 name: Node.js Package
-on:
-  push:
-    tags:
-      - "v*"
+on: create
 jobs:
   build:
     runs-on: ubuntu-latest
