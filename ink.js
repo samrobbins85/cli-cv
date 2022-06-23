@@ -1,7 +1,8 @@
 const React = require("react");
 const { Text, Box } = require("ink");
 const BigText = require("ink-big-text");
-const config = require("./config.json");
+const { useEffect, useState } = require("react");
+const fetch = require("node-fetch");
 function Skill(props) {
   return (
     <Box>
@@ -35,6 +36,19 @@ function Section(props) {
 }
 
 const CV = () => {
+  const [data, setData] = useState(null);
+  useEffect(() => {
+    fetch(
+      "https://raw.githubusercontent.com/samrobbins85/resume/main/data.json"
+    )
+      .then((response) => response.json())
+      .then((info) => {
+        setData(info);
+      });
+  }, []);
+  if (!data) {
+    return <Text>{" Loading"}</Text>;
+  }
   return (
     <Box
       borderStyle="double"
@@ -45,41 +59,52 @@ const CV = () => {
     >
       <Box justifyContent="center">
         {process.stdout.columns > 100 ? (
-          <BigText text={config.name} font="simple" />
+          <BigText text={data.name} font="simple" />
         ) : (
-          <BigText text={config.name} font="tiny" />
+          <BigText text={data.name} font="tiny" />
         )}
       </Box>
-      {config.skills ? (
+      {data.languages || data.librariesAndFrameworks || data.software ? (
         <Section title="Skills">
-          {Object.keys(config.skills).map((title) => (
-            <Skill name={title}>{config.skills[title].join(", ")}</Skill>
-          ))}
+          {data.languages && (
+            <Skill name="Languages">{data.languages.join(", ")}</Skill>
+          )}
+          {data.librariesAndFrameworks && (
+            <Skill name="Languages">
+              {data.librariesAndFrameworks.join(", ")}
+            </Skill>
+          )}
+          {data.software && (
+            <Skill name="Software">{data.software.join(", ")}</Skill>
+          )}
         </Section>
       ) : undefined}
-      {config.qualifications ? (
+      {data.education ? (
         <Section title="Qualifications">
-          {config.qualifications.map((item) => (
-            <Item title={item.title} date={item.date}>
+          {data.education.map((item) => (
+            <Item
+              title={`${item.qualification} - ${item.institution}`}
+              date={item.duration}
+            >
               {item.description}
             </Item>
           ))}
         </Section>
       ) : undefined}
 
-      {config.experience ? (
+      {data.experience ? (
         <Section title="Experience">
-          {config.experience.map((item) => (
-            <Item title={item.title} date={item.date}>
+          {data.experience.map((item) => (
+            <Item title={`${item.role} - ${item.company}`} date={item.duration}>
               {item.description}
             </Item>
           ))}
         </Section>
       ) : undefined}
-      {config.projects ? (
+      {data.project ? (
         <Section title="Projects">
-          {config.projects.map((item) => (
-            <Item title={item.title} date={item.date}>
+          {data.project.map((item) => (
+            <Item title={item.name} date={item.date}>
               {item.description}
             </Item>
           ))}
